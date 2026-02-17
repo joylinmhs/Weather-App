@@ -4,6 +4,8 @@ function WeatherCard() {
     const [city, setCity] = useState("");
     const [temp, setTemp] = useState("");
     const [desc, setDesc] = useState("");
+    const [icon, setIcon] = useState("");
+
 
     const getWeather = async () => {
         const apiKey = "19b801a505759f72b62c17a385833031";
@@ -17,6 +19,8 @@ function WeatherCard() {
         if (data.cod === 200) {
             setTemp(data.main.temp);
             setDesc(data.weather[0].description);
+            setIcon(data.weather[0].icon);
+
         } else {
             alert("City not found or API key not active yet");
         }
@@ -33,6 +37,10 @@ function WeatherCard() {
 
             <h2>{city}</h2>
             <h1>{temp}°C</h1>
+            <img
+                src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+                alt="weather icon"
+            />
             <p>{desc}</p>
         </div>
     );
