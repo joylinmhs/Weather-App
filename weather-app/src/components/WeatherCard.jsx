@@ -8,7 +8,7 @@ function WeatherCard() {
 
 
     const getWeather = async () => {
-        const apiKey = "19b801a505759f72b62c17a385833031";
+        const apiKey = import.meta.env.VITE_API_KEY;
 
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
