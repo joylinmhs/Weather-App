@@ -5,14 +5,11 @@ function WeatherCard() {
     const [temp, setTemp] = useState("");
     const [desc, setDesc] = useState("");
     const [icon, setIcon] = useState("");
+    const [weatherType, setWeatherType] = useState("");
 
 
     const getWeather = async () => {
-
         const apiKey = import.meta.env.VITE_API_KEY;
-
-
-
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
 
@@ -23,6 +20,7 @@ function WeatherCard() {
         if (data.cod === 200) {
             setTemp(data.main.temp);
             setDesc(data.weather[0].description);
+            setWeatherType(data.weather[0].main);
             setIcon(data.weather[0].icon);
 
         } else {
@@ -31,7 +29,7 @@ function WeatherCard() {
     };
 
     return (
-        <div className="card">
+        <div className={`card ${weatherType.toLowerCase()}`}>
             <input
                 type="text"
                 placeholder="Enter city"

@@ -45,3 +45,19 @@ h1 {
 p {
     text-transform: capitalize;
 }
+
+.clear {
+    background: linear-gradient(135deg, #fceabb, #f8b500);
+}
+
+.clouds {
+    background: linear-gradient(135deg, #d7d2cc, #304352);
+}
+
+.rain {
+    background: linear-gradient(135deg, #4b6cb7, #182848);
+}
+
+.snow {
+    background: linear-gradient(135deg, #e6dada, #274046);
+}
