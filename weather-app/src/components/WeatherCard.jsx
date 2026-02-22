@@ -6,13 +6,13 @@ function WeatherCard() {
     const [desc, setDesc] = useState("");
     const [icon, setIcon] = useState("");
     const [weatherType, setWeatherType] = useState("");
-
+    const [isNight, setIsNight] = useState(false);
 
     const getWeather = async () => {
         const apiKey = import.meta.env.VITE_API_KEY;
+
         const response = await fetch(
             `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`
-
         );
 
         const data = await response.json();
@@ -23,27 +23,38 @@ function WeatherCard() {
             setWeatherType(data.weather[0].main);
             setIcon(data.weather[0].icon);
 
+            const iconCode = data.weather[0].icon;
+
+            if (iconCode.includes("n")) {
+                setIsNight(true);
+            } else {
+                setIsNight(false);
+            }
         } else {
             alert("City not found or API key not active yet");
         }
     };
 
     return (
-        <div className={`card ${weatherType.toLowerCase()}`}>
-            <input
-                type="text"
-                placeholder="Enter city"
-                onChange={(e) => setCity(e.target.value)}
-            />
-            <button onClick={getWeather}>Search</button>
+        <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
+            <div className="card">
+                <input
+                    type="text"
+                    placeholder="Enter city"
+                    onChange={(e) => setCity(e.target.value)}
+                />
+                <button onClick={getWeather}>Search</button>
 
-            <h2>{city}</h2>
-            <h1>{temp}°C</h1>
-            <img
-                src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
-                alt="weather icon"
-            />
-            <p>{desc}</p>
+                <h2>{city}</h2>
+                <h1>{temp}°C</h1>
+
+                <img
+                    src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+                    alt="weather icon"
+                />
+
+                <p>{desc}</p>
+            </div>
         </div>
     );
 }
