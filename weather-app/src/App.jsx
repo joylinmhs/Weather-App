@@ -3,8 +3,9 @@ import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div className="app">
       <WeatherCard />
+      <div className="stars"></div>
     </div>
   );
 }

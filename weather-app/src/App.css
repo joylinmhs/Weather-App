@@ -81,3 +81,41 @@ p {
 .Snow.night {
     background: linear-gradient(to top, #0f2027, #2c5364);
 }
+
+.stars {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    pointer-events: none;
+}
+
+.stars::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    box-shadow:
+        100px 200px white,
+        200px 300px white,
+        300px 400px white,
+        400px 150px white,
+        500px 250px white,
+        600px 350px white,
+        700px 450px white,
+        800px 100px white,
+        900px 200px white,
+        1000px 300px white;
+    animation: twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle {
+    from {
+        opacity: 0.2;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
