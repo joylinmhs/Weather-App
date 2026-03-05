@@ -2,13 +2,19 @@ import { useState } from "react";
 
 function WeatherCard() {
     const [city, setCity] = useState("");
-    const [temp, setTemp] = useState("");
+    const [temp, setTemp] = useState(null);
     const [desc, setDesc] = useState("");
     const [icon, setIcon] = useState("");
     const [weatherType, setWeatherType] = useState("");
     const [isNight, setIsNight] = useState(false);
 
     const getWeather = async () => {
+
+        if (!city.trim()) {
+            alert("Please enter a city name");
+            return;
+        }
+
         const apiKey = import.meta.env.VITE_API_KEY;
 
         const response = await fetch(
@@ -25,35 +31,50 @@ function WeatherCard() {
 
             const iconCode = data.weather[0].icon;
 
-            if (iconCode.includes("n")) {
-                setIsNight(true);
-            } else {
-                setIsNight(false);
-            }
+            setIsNight(iconCode.includes("n"));
         } else {
-            alert("City not found or API key not active yet");
+            alert("City not found");
         }
     };
 
     return (
         <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
             <div className="card">
-                <input
-                    type="text"
-                    placeholder="Enter city"
-                    onChange={(e) => setCity(e.target.value)}
-                />
-                <button onClick={getWeather}>Search</button>
 
-                <h2>{city}</h2>
-                <h1>{temp}°C</h1>
+                {/* Search Bar */}
+                <div className="search-bar">
+                    <input
+                        type="text"
+                        placeholder="Enter city..."
+                        value={city}
+                        onChange={(e) => setCity(e.target.value)}
+                        onKeyDown={(e) => {
+                            if (e.key === "Enter") {
+                                getWeather();
+                            }
+                        }}
+                    />
 
-                <img
-                    src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
-                    alt="weather icon"
-                />
+                    <button onClick={getWeather}>
+                        Search
+                    </button>
+                </div>
 
-                <p>{desc}</p>
+                {/* Weather Info */}
+                {temp !== null && (
+                    <>
+                        <h2>{city}</h2>
+                        <h1>{temp}°C</h1>
+
+                        <img
+                            src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
+                            alt="weather icon"
+                        />
+
+                        <p>{desc}</p>
+                    </>
+                )}
+
             </div>
         </div>
     );
