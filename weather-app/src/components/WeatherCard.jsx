@@ -39,6 +39,8 @@ function WeatherCard() {
 
     return (
         <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
+            <div className="stars"></div>
+            <div className="bright-stars"></div>
             <div className="card">
 
                 {/* Search Bar */}
