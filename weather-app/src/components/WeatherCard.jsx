@@ -48,6 +48,14 @@ function WeatherCard() {
             ) : (
                 <div className="sun"></div>
             )}
+
+            {(weatherType === "Clouds" || weatherType === "Rain" || weatherType === "Mist") && (
+                <>
+                    <div className="cloud cloud1"></div>
+                    <div className="cloud cloud2"></div>
+                    <div className="cloud cloud3"></div>
+                </>
+            )}
             <div className="card">
 
                 {/* Search Bar */}

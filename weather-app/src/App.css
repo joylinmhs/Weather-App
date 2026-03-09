@@ -210,3 +210,60 @@ p {
         transform: scale(1.1);
     }
 }
+
+.cloud {
+    position: fixed;
+    width: 200px;
+    height: 100px;
+    background: white;
+    border-radius: 100px;
+    opacity: 0.6;
+    filter: blur(1px);
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud::before {
+    width: 120px;
+    height: 120px;
+    top: -40px;
+    left: 20px;
+}
+
+.cloud::after {
+    width: 80px;
+    height: 80px;
+    top: -20px;
+    right: 20px;
+}
+
+@keyframes moveClouds {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(120vw);
+    }
+}
+
+.cloud1 {
+    top: 120px;
+    animation: moveClouds 90s linear infinite;
+}
+
+.cloud2 {
+    top: 200px;
+    animation: moveClouds 120s linear infinite;
+}
+
+.cloud3 {
+    top: 300px;
+    animation: moveClouds 150s linear infinite;
+}
