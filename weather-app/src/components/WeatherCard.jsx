@@ -39,14 +39,16 @@ function WeatherCard() {
 
     return (
         <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
-            {isNight ? (
-                <>
-                    <div className="stars"></div>
-                    <div className="bright-stars"></div>
-                    <div className="moon"></div>
-                </>
-            ) : (
-                <div className="sun"></div>
+            {temp !== null && (
+                isNight ? (
+                    <>
+                        <div className="stars"></div>
+                        <div className="bright-stars"></div>
+                        <div className="moon"></div>
+                    </>
+                ) : (
+                    <div className="sun"></div>
+                )
             )}
 
             {(weatherType === "Clouds" || weatherType === "Rain" || weatherType === "Mist") && (
