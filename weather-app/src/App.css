@@ -242,28 +242,3 @@ p {
     top: -20px;
     right: 20px;
 }
-
-@keyframes moveClouds {
-    from {
-        transform: translateX(-300px);
-    }
-
-    to {
-        transform: translateX(120vw);
-    }
-}
-
-.cloud1 {
-    top: 120px;
-    animation: moveClouds 90s linear infinite;
-}
-
-.cloud2 {
-    top: 200px;
-    animation: moveClouds 120s linear infinite;
-}
-
-.cloud3 {
-    top: 300px;
-    animation: moveClouds 150s linear infinite;
-}
