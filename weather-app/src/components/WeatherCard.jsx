@@ -47,7 +47,7 @@ function WeatherCard() {
                         <div className="moon"></div>
                     </>
                 ) : (
-                    <div className="sun"></div>
+                    weatherType === "Clear" && <div className="sun"></div>
                 )
             )}
 

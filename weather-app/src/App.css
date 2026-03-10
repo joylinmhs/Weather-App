@@ -252,3 +252,23 @@ p {
         transform: translateX(120vw);
     }
 }
+
+.cloud1 {
+    top: 120px;
+    left: -200px;
+    animation: moveClouds 90s linear infinite;
+}
+
+.cloud2 {
+    top: 220px;
+    left: -600px;
+    animation: moveClouds 120s linear infinite;
+    animation-delay: -30s;
+}
+
+.cloud3 {
+    top: 320px;
+    left: -1000px;
+    animation: moveClouds 150s linear infinite;
+    animation-delay: -60s;
+}
