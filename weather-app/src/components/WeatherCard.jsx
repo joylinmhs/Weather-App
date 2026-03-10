@@ -45,6 +45,8 @@ function WeatherCard() {
                         <div className="stars"></div>
                         <div className="bright-stars"></div>
                         <div className="moon"></div>
+                        <div className="shooting-star"></div>
+
                     </>
                 ) : (
                     weatherType === "Clear" && <div className="sun"></div>
