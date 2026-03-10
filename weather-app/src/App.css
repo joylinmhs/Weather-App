@@ -242,3 +242,13 @@ p {
     top: -20px;
     right: 20px;
 }
+
+@keyframes moveClouds {
+    from {
+        transform: translateX(-300px);
+    }
+
+    to {
+        transform: translateX(120vw);
+    }
+}
