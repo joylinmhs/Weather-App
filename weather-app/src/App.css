@@ -272,3 +272,37 @@ p {
     animation: moveClouds 150s linear infinite;
     animation-delay: -60s;
 }
+
+.shooting-star {
+    position: fixed;
+    top: 80px;
+    left: -200px;
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(90deg, white, transparent);
+    opacity: 0;
+    transform: rotate(25deg);
+    animation: shoot 12s linear infinite;
+}
+
+@keyframes shoot {
+
+    0% {
+        transform: translateX(0) translateY(0) rotate(25deg);
+        opacity: 0;
+    }
+
+    5% {
+        opacity: 1;
+    }
+
+    15% {
+        transform: translateX(800px) translateY(300px) rotate(25deg);
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+
+}
