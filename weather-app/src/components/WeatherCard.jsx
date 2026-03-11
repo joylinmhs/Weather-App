@@ -42,6 +42,7 @@ function WeatherCard() {
             {temp !== null && (
                 isNight ? (
                     <>
+                        <div className="galaxy"></div>
                         <div className="stars"></div>
                         <div className="bright-stars"></div>
                         <div className="moon"></div>
