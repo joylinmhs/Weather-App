@@ -325,6 +325,7 @@ p {
         radial-gradient(ellipse at 50% 80%,
             rgba(255, 255, 255, 0.08),
             transparent 50%);
+    animation: galaxyGlow 20s ease-in-out infinite alternate;
 }
 
 @keyframes galaxyGlow {
