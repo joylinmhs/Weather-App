@@ -7,6 +7,7 @@ function WeatherCard() {
     const [icon, setIcon] = useState("");
     const [weatherType, setWeatherType] = useState("");
     const [isNight, setIsNight] = useState(false);
+    const [forecast, setForecast] = useState([]);
 
     const getWeather = async () => {
 
@@ -22,6 +23,14 @@ function WeatherCard() {
         );
 
         const data = await response.json();
+
+        const forecastResponse = await fetch(
+            `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`
+        );
+
+        const forecastData = await forecastResponse.json();
+
+        setForecast(forecastData.list);
 
         if (data.cod === 200) {
             setTemp(data.main.temp);
