@@ -29,8 +29,8 @@ function WeatherCard() {
         );
 
         const forecastData = await forecastResponse.json();
-
         setForecast(forecastData.list);
+
 
         if (data.cod === 200) {
             setTemp(data.main.temp);
