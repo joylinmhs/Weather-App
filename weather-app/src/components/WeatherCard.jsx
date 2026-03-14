@@ -29,7 +29,11 @@ function WeatherCard() {
         );
 
         const forecastData = await forecastResponse.json();
-        setForecast(forecastData.list);
+        const dailyForecast = forecastData.list.filter((item) =>
+            item.dt_txt.includes("12:00:00")
+        );
+
+        setForecast(dailyForecast);
 
 
         if (data.cod === 200) {
