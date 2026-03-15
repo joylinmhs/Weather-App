@@ -36,6 +36,7 @@ function WeatherCard() {
         setForecast(dailyForecast);
 
 
+
         if (data.cod === 200) {
             setTemp(data.main.temp);
             setDesc(data.weather[0].description);
@@ -107,6 +108,22 @@ function WeatherCard() {
                         />
 
                         <p>{desc}</p>
+                        <div className="forecast">
+                            {forecast.map((day, index) => {
+                                const date = new Date(day.dt_txt);
+                                const dayName = date.toLocaleDateString("en-US", { weekday: "short" });
+
+                                return (
+                                    <div key={index} className="forecast-day">
+                                        <p>{dayName}</p>
+                                        <img
+                                            src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+                                        />
+                                        <p>{Math.round(day.main.temp)}°C</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
                     </>
                 )}
 
