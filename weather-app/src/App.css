@@ -353,3 +353,7 @@ p {
     justify-content: space-between;
     margin-top: 20px;
 }
+
+.forecast-day img {
+    width: 40px;
+}
