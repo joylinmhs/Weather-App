@@ -341,3 +341,9 @@ p {
         opacity: 0.8;
     }
 }
+
+.forecast {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
