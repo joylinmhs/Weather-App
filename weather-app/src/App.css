@@ -346,6 +346,7 @@ p {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    gap: 10px;
 }
 
 .forecast-day {
@@ -358,9 +359,7 @@ p {
     transition: transform 0.2s ease;
 }
 
-.forecast-day:hover {
-    transform: translateY(-3px);
-}
+
 
 .forecast {
     display: flex;
