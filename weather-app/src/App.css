@@ -348,6 +348,16 @@ p {
     margin-top: 20px;
 }
 
+.forecast-day {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
 .forecast {
     display: flex;
     justify-content: space-between;
