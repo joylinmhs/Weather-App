@@ -363,6 +363,11 @@ p {
     transform: translateY(-3px);
 }
 
+.forecast-day p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
 .forecast-day img {
     width: 40px;
 }
