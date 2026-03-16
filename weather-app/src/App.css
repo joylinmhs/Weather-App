@@ -359,13 +359,8 @@ p {
     transition: transform 0.2s ease;
 }
 
-
-
-.forecast {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    gap: 10px;
+.forecast-day:hover {
+    transform: translateY(-3px);
 }
 
 .forecast-day img {
