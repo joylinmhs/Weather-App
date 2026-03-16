@@ -119,7 +119,7 @@ function WeatherCard() {
                                         <img
                                             src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
                                         />
-                                        <p>{Math.round(day.main.temp)}°C</p>
+                                        <p className="forecast-temp">{Math.round(day.main.temp)}°C</p>
                                     </div>
                                 );
                             })}
