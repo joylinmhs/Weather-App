@@ -358,6 +358,10 @@ p {
     transition: transform 0.2s ease;
 }
 
+.forecast-day:hover {
+    transform: translateY(-3px);
+}
+
 .forecast {
     display: flex;
     justify-content: space-between;
