@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function WeatherCard() {
     const [city, setCity] = useState("");
