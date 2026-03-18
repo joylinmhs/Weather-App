@@ -122,10 +122,12 @@ function WeatherCard() {
                         />
 
                         <p>{desc}</p>
-                        <div className="sun-times">
-                            <p>🌅 {sunrise}</p>
-                            <p>🌇 {sunset}</p>
-                        </div>
+                        {sunrise && sunset && (
+                            <div className="sun-times">
+                                <p>🌅 {sunrise}</p>
+                                <p>🌇 {sunset}</p>
+                            </div>
+                        )}
                         <div className="forecast">
                             {forecast.map((day, index) => {
                                 const date = new Date(day.dt_txt);
