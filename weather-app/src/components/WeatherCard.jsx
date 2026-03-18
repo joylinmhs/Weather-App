@@ -46,6 +46,17 @@ function WeatherCard() {
             setWeatherType(data.weather[0].main);
             setIcon(data.weather[0].icon);
 
+            const sunriseTime = new Date(data.sys.sunrise * 1000);
+            const sunsetTime = new Date(data.sys.sunset * 1000);
+
+            setSunrise(
+                sunriseTime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+            );
+            setSunset(
+                sunsetTime.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" })
+            );
+
+
             const iconCode = data.weather[0].icon;
 
             setIsNight(iconCode.includes("n"));
