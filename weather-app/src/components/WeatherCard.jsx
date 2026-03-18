@@ -51,6 +51,28 @@ function WeatherCard() {
         }
     };
 
+    const getWeatherByLocation = async (lat, lon) => {
+        const apiKey = import.meta.env.VITE_API_KEY;
+
+        const response = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
+        );
+
+        const data = await response.json();
+
+        if (data.cod === 200) {
+            setCity(data.name);
+            setTemp(data.main.temp);
+            setDesc(data.weather[0].description);
+            setWeatherType(data.weather[0].main);
+            setIcon(data.weather[0].icon);
+
+            const iconCode = data.weather[0].icon;
+            setIsNight(iconCode.includes("n"));
+        }
+    };
+
+
     return (
         <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
             {temp !== null && (
