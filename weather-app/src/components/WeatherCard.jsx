@@ -8,6 +8,9 @@ function WeatherCard() {
     const [weatherType, setWeatherType] = useState("");
     const [isNight, setIsNight] = useState(false);
     const [forecast, setForecast] = useState([]);
+    const [sunrise, setSunrise] = useState("");
+    const [sunset, setSunset] = useState("");
+
 
     const getWeather = async () => {
 
@@ -50,42 +53,6 @@ function WeatherCard() {
             alert("City not found");
         }
     };
-
-    const getWeatherByLocation = async (lat, lon) => {
-        const apiKey = import.meta.env.VITE_API_KEY;
-
-        const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`
-        );
-
-        const data = await response.json();
-
-        if (data.cod === 200) {
-            setCity(data.name);
-            setTemp(data.main.temp);
-            setDesc(data.weather[0].description);
-            setWeatherType(data.weather[0].main);
-            setIcon(data.weather[0].icon);
-
-            const iconCode = data.weather[0].icon;
-            setIsNight(iconCode.includes("n"));
-        }
-    };
-
-    useEffect(() => {
-        navigator.geolocation.getCurrentPosition(
-            (position) => {
-                const lat = position.coords.latitude;
-                const lon = position.coords.longitude;
-
-                getWeatherByLocation(lat, lon);
-            },
-            (error) => {
-                console.log("Location access denied");
-            }
-        );
-    }, []);
-
 
     return (
         <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
