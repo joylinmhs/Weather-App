@@ -72,6 +72,20 @@ function WeatherCard() {
         }
     };
 
+    useEffect(() => {
+        navigator.geolocation.getCurrentPosition(
+            (position) => {
+                const lat = position.coords.latitude;
+                const lon = position.coords.longitude;
+
+                getWeatherByLocation(lat, lon);
+            },
+            (error) => {
+                console.log("Location access denied");
+            }
+        );
+    }, []);
+
 
     return (
         <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
