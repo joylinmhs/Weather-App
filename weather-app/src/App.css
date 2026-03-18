@@ -376,3 +376,10 @@ p {
     font-weight: bold;
     font-size: 16px;
 }
+
+.sun-times {
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-around;
+}
