@@ -405,3 +405,7 @@ p {
 .sun-card:hover {
     transform: translateY(-3px);
 }
+
+.sun-card span {
+    font-size: 20px;
+}
