@@ -126,13 +126,11 @@ function WeatherCard() {
                             <div className="sun-times">
                                 <div className="sun-card">
                                     <span>🌅</span>
-                                    <p>Sunrise</p>
                                     <h4>{sunrise}</h4>
                                 </div>
 
                                 <div className="sun-card">
                                     <span>🌇</span>
-                                    <p>Sunset</p>
                                     <h4>{sunset}</h4>
                                 </div>
                             </div>

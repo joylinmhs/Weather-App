@@ -383,3 +383,10 @@ p {
     display: flex;
     justify-content: space-around;
 }
+
+.sun-times {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    gap: 10px;
+}
