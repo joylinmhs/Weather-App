@@ -129,29 +129,36 @@ function WeatherCard() {
                                     <p>Sunrise</p>
                                     <h4>{sunrise}</h4>
                                 </div>
-                        )}
-                                <div className="forecast">
-                                    {forecast.map((day, index) => {
-                                        const date = new Date(day.dt_txt);
-                                        const dayName = date.toLocaleDateString("en-US", { weekday: "short" });
 
-                                        return (
-                                            <div key={index} className="forecast-day">
-                                                <p>{dayName}</p>
-                                                <img
-                                                    src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
-                                                />
-                                                <p className="forecast-temp">{Math.round(day.main.temp)}°C</p>
-                                            </div>
-                                        );
-                                    })}
+                                <div className="sun-card">
+                                    <span>🌇</span>
+                                    <p>Sunset</p>
+                                    <h4>{sunset}</h4>
                                 </div>
-                            </>
+                            </div>
                         )}
+                        <div className="forecast">
+                            {forecast.map((day, index) => {
+                                const date = new Date(day.dt_txt);
+                                const dayName = date.toLocaleDateString("en-US", { weekday: "short" });
 
-                    </div>
+                                return (
+                                    <div key={index} className="forecast-day">
+                                        <p>{dayName}</p>
+                                        <img
+                                            src={`https://openweathermap.org/img/wn/${day.weather[0].icon}.png`}
+                                        />
+                                        <p className="forecast-temp">{Math.round(day.main.temp)}°C</p>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </>
+                )}
+
             </div>
-            );
+        </div>
+    );
 }
 
-            export default WeatherCard;
+export default WeatherCard;
