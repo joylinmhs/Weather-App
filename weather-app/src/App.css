@@ -409,3 +409,9 @@ p {
 .sun-card span {
     font-size: 20px;
 }
+
+.sun-card p {
+    margin: 5px 0;
+    font-size: 12px;
+    color: #555;
+}
