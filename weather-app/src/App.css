@@ -390,3 +390,14 @@ p {
     margin-top: 15px;
     gap: 10px;
 }
+
+.sun-card {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
