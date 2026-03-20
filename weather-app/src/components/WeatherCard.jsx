@@ -10,6 +10,7 @@ function WeatherCard() {
     const [forecast, setForecast] = useState([]);
     const [sunrise, setSunrise] = useState("");
     const [sunset, setSunset] = useState("");
+    const [humidity, setHumidity] = useState("");
 
 
     const getWeather = async () => {
