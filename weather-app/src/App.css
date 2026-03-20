@@ -457,3 +457,13 @@ p {
     margin: 5px 0 0;
     font-size: 15px;
 }
+
+@media (max-width: 500px) {
+    .details {
+        flex-wrap: wrap;
+    }
+
+    .detail-card {
+        flex: 45%;
+    }
+}
