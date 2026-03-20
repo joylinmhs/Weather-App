@@ -143,6 +143,31 @@ function WeatherCard() {
                                 </div>
                             </div>
                         )}
+                        <div className="details">
+                            <div className="detail-card">
+                                <p>💧</p>
+                                <span>Humidity</span>
+                                <h4>{humidity}%</h4>
+                            </div>
+
+                            <div className="detail-card">
+                                <p>🌬</p>
+                                <span>Wind</span>
+                                <h4>{wind} m/s</h4>
+                            </div>
+
+                            <div className="detail-card">
+                                <p>🌡</p>
+                                <span>Feels Like</span>
+                                <h4>{feelsLike}°C</h4>
+                            </div>
+
+                            <div className="detail-card">
+                                <p>📊</p>
+                                <span>Pressure</span>
+                                <h4>{pressure} hPa</h4>
+                            </div>
+                        </div>
                         <div className="forecast">
                             {forecast.map((day, index) => {
                                 const date = new Date(day.dt_txt);
