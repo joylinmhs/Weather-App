@@ -437,3 +437,12 @@ p {
     font-size: 14px;
     transition: transform 0.2s ease;
 }
+
+.detail-card:hover {
+    transform: translateY(-3px);
+}
+
+.detail-card p {
+    font-size: 18px;
+    margin: 0;
+}
