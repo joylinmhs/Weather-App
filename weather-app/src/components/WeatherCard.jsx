@@ -49,6 +49,10 @@ function WeatherCard() {
             setDesc(data.weather[0].description);
             setWeatherType(data.weather[0].main);
             setIcon(data.weather[0].icon);
+            setHumidity(data.main.humidity);
+            setWind(data.wind.speed);
+            setFeelsLike(Math.round(data.main.feels_like));
+            setPressure(data.main.pressure);
 
             const sunriseTime = new Date(data.sys.sunrise * 1000);
             const sunsetTime = new Date(data.sys.sunset * 1000);
