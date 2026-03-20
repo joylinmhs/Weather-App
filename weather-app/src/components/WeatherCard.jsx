@@ -12,6 +12,8 @@ function WeatherCard() {
     const [sunset, setSunset] = useState("");
     const [humidity, setHumidity] = useState("");
     const [wind, setWind] = useState("");
+    const [feelsLike, setFeelsLike] = useState("");
+    const [pressure, setPressure] = useState("");
 
 
     const getWeather = async () => {
