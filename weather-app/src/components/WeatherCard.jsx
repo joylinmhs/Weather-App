@@ -14,6 +14,7 @@ function WeatherCard() {
     const [wind, setWind] = useState("");
     const [feelsLike, setFeelsLike] = useState("");
     const [pressure, setPressure] = useState("");
+    const [localTime, setLocalTime] = useState("");
 
 
     const getWeather = async () => {
