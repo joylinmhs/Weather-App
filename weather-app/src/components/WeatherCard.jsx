@@ -69,6 +69,19 @@ function WeatherCard() {
             const iconCode = data.weather[0].icon;
 
             setIsNight(iconCode.includes("n"));
+
+            const timezoneOffset = data.timezone; // seconds
+
+            const utc = new Date().getTime() + new Date().getTimezoneOffset() * 60000;
+
+            const cityTime = new Date(utc + timezoneOffset * 1000);
+
+            setLocalTime(
+                cityTime.toLocaleTimeString([], {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                })
+            );
         } else {
             alert("City not found");
         }
