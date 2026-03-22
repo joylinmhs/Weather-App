@@ -477,3 +477,8 @@ p {
 .app.night .time {
     color: #ddd;
 }
+
+.mist {
+    background: linear-gradient(135deg, #d7d2cc, #f0f0f0);
+    position: relative;
+}
