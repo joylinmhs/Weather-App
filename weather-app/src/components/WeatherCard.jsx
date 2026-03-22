@@ -88,7 +88,7 @@ function WeatherCard() {
     };
 
     return (
-        <div className={`app ${weatherType.toLowerCase()} ${isNight ? "night" : "day"}`}>
+        <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
             {temp !== null && (
                 isNight ? (
                     <>

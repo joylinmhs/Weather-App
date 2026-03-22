@@ -478,12 +478,12 @@ p {
     color: #ddd;
 }
 
-.mist {
+.Mist {
     background: linear-gradient(135deg, #d7d2cc, #f0f0f0);
     position: relative;
 }
 
-.mist::before {
+.Mist::before {
     content: "";
     position: absolute;
     width: 200%;
