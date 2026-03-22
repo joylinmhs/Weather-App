@@ -467,3 +467,9 @@ p {
         flex: 45%;
     }
 }
+
+.time {
+    font-size: 14px;
+    margin-top: -10px;
+    color: #555;
+}
