@@ -482,3 +482,24 @@ p {
     background: linear-gradient(135deg, #d7d2cc, #f0f0f0);
     position: relative;
 }
+
+.mist::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10%);
+    background-size: 100px 100px;
+    opacity: 0.3;
+    animation: fogMove 20s linear infinite;
+}
+
+@keyframes fogMove {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-200px);
+    }
+}
