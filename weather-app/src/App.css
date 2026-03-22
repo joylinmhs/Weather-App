@@ -473,3 +473,7 @@ p {
     margin-top: -10px;
     color: #555;
 }
+
+.app.night .time {
+    color: #ddd;
+}
