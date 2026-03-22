@@ -138,6 +138,8 @@ function WeatherCard() {
                         <h2>{city}</h2>
                         <h1>{temp}°C</h1>
 
+                        {localTime && <p className="time">🕒 {localTime}</p>}
+
                         <img
                             src={`https://openweathermap.org/img/wn/${icon}@2x.png`}
                             alt="weather icon"
