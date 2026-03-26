@@ -511,7 +511,7 @@ p {
             transparent 70%);
 
     filter: blur(30px);
-    opacity: 0.5;
+    opacity: 0.4;
     animation: fogMove2 35s linear infinite;
 }
 
