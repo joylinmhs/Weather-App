@@ -524,3 +524,13 @@ p {
         transform: translateX(50%);
     }
 }
+
+@keyframes fogMove2 {
+    from {
+        transform: translatex(0);
+    }
+
+    to {
+        transform: translatex(30%);
+    }
+}
