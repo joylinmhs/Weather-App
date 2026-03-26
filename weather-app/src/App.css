@@ -495,10 +495,10 @@ p {
     /*background-size: 100px 100px;*/
     filter: blur(20px);
     opacity: 0.5;
-    animation: fogMove 25s linear infinite;
+    animation: fogMove1 25s linear infinite;
 }
 
-@keyframes fogMove {
+@keyframes fogMove1 {
     from {
         transform: translateX(0);
     }
