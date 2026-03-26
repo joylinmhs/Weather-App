@@ -489,10 +489,12 @@ p {
     position: absolute;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 10%);
-    background-size: 100px 100px;
-    opacity: 0.3;
-    animation: fogMove 20s linear infinite;
+    top: 20%;
+    left: -50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 70%);
+    /*background-size: 100px 100px;*/
+    opacity: 0.5;
+    animation: fogMove 25s linear infinite;
 }
 
 @keyframes fogMove {
