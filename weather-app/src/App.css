@@ -491,11 +491,28 @@ p {
     height: 200%;
     top: 20%;
     left: -50%;
-    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 20%, transparent 70%);
     /*background-size: 100px 100px;*/
     filter: blur(20px);
     opacity: 0.5;
     animation: fogMove1 25s linear infinite;
+}
+
+.mist::after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    top: 20%;
+    left: -50%;
+
+    background: radial-gradient(circle,
+            rgba(255, 255, 255, 0.2) 20%,
+            transparent 70%);
+
+    filter: blur(30px);
+    opacity: 0.5;
+    animation: fogMove2 35s linear infinite;
 }
 
 @keyframes fogMove1 {
@@ -504,6 +521,6 @@ p {
     }
 
     to {
-        transform: translateX(-200px);
+        transform: translateX(50%);
     }
 }
