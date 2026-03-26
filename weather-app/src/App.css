@@ -493,6 +493,7 @@ p {
     left: -50%;
     background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 20%, transparent 70%);
     /*background-size: 100px 100px;*/
+    filter: blur(20px);
     opacity: 0.5;
     animation: fogMove 25s linear infinite;
 }
