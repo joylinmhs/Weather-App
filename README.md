@@ -1,1 +1,1 @@
-Weather Webapp 🕚 
+Weather Webapplication 🕚 
