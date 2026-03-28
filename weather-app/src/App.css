@@ -512,7 +512,7 @@ p {
 
     filter: blur(30px);
     opacity: 0.4;
-    animation: fogMove2 35s linear infinite;
+    animation: fogMove2 36s linear infinite;
 }
 
 @keyframes fogMove1 {
