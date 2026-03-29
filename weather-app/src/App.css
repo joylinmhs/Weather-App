@@ -544,3 +544,8 @@ p {
 .warm {
     background: radial-gradient(circle at top right, #89f7fe, #66a6ff);
 }
+
+/* COLD */
+.cold {
+    background: radial-gradient(circle at top right, #c9d6ff, #e2e2e2);
+}
