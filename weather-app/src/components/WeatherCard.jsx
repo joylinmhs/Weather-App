@@ -88,7 +88,7 @@ function WeatherCard() {
     };
 
     return (
-        <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
+        <div className={`app ${weatherType} ${isNight ? "night" : "day"} ${getTempClass()}`}>
             {temp !== null && (
                 isNight ? (
                     <>
@@ -189,6 +189,13 @@ function WeatherCard() {
                                 const date = new Date(day.dt_txt);
                                 const dayName = date.toLocaleDateString("en-US", { weekday: "short" });
 
+                                const getTempClass = () => {
+                                    if (!temp) return "";
+
+                                    if (temp >= 30) return "hot";
+                                    if (temp >= 20) return "warm";
+                                    return "cold";
+                                };
                                 return (
                                     <div key={index} className="forecast-day">
                                         <p>{dayName}</p>
