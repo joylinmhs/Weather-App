@@ -553,3 +553,7 @@ p {
 .app.hot.clear {
     background: radial-gradient(circle at top right, #ffb347, #ff5e62);
 }
+
+.app.cold.clear {
+    background: radial-gradient(circle at top right, #89cfff, #d0e7ff);
+}
