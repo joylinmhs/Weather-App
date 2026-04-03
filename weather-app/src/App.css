@@ -4,15 +4,6 @@ body {
     font-family: "Poppins", sans-serif;
 }
 
-.app {
-    height: 100vh;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: 0.5s ease;
-}
-
 .card {
     background: rgba(255, 255, 255, 0.7);
     padding: 40px;
@@ -21,11 +12,21 @@ body {
     backdrop-filter: blur(10px);
     box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.1);
     width: 300px;
-    z-index: 2;
+    z-index: 10;
     position: relative;
-
-
 }
+
+.app {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s ease;
+    position:relative;
+}
+
+
 
 input {
     padding: 12px 15px;
@@ -498,7 +499,7 @@ p {
     animation: fogMove1 25s linear infinite;
 }
 
-.mist::after {
+.Mist::after {
     content: "";
     position: absolute;
     width: 200%;
@@ -556,4 +557,14 @@ p {
 
 .app.cold.clear {
     background: radial-gradient(circle at top right, #89cfff, #d0e7ff);
+}
+
+.sun,
+.cloud,
+.stars,
+.bright-stars,
+.galaxy,
+.moon,
+.shooting-star {
+  pointer-events: none;
 }

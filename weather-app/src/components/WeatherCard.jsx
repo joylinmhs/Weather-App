@@ -88,7 +88,8 @@ function WeatherCard() {
     };
 
     return (
-        <div className={`app ${weatherType} ${isNight ? "night" : "day"} ${getTempClass()}`}>
+        <div className={`app ${weatherType} ${isNight ? "night" : "day"}`}>
+        
             {temp !== null && (
                 isNight ? (
                     <>
@@ -196,6 +197,12 @@ function WeatherCard() {
                                     if (temp >= 20) return "warm";
                                     return "cold";
                                 };
+
+                                // const getTempClassForDay = (temp) => {
+                                //     if (temp >= 30) return "hot";
+                                //     if (temp >= 20) return "warm";
+                                //     return "cold";
+                                // };
                                 return (
                                     <div key={index} className="forecast-day">
                                         <p>{dayName}</p>
