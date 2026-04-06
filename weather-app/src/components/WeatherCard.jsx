@@ -105,7 +105,7 @@ function WeatherCard() {
                 )
             )}
 
-            {(weatherType === "Clouds" || weatherType === "Rain" || weatherType === "Mist") && (
+            {temp !== null && (weatherType === "Clouds" || weatherType === "Rain" || weatherType === "Mist") && (
                 <>
                     <div className="cloud cloud1"></div>
                     <div className="cloud cloud2"></div>
