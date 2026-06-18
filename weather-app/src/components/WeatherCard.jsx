@@ -149,7 +149,7 @@ function WeatherCard() {
                         <p>{desc}</p>
                         {sunrise && sunset && (
                             <div className="sun-times">
-                                <div className="sun-card">
+                                <div className="sun-card"> 
                                     <span>🌅</span>
                                     <h4>{sunrise}</h4>
                                 </div>
